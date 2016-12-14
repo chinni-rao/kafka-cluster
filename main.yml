@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: centos
+  roles:
+    - java
+#    - { role: java, when: accept_oracle_licence }
+- hosts: zk
+  remote_user: centos
+  roles:
+    - zookeeper
+- hosts: kafka
+  remote_user: centos
+  roles:
+    - kafka
